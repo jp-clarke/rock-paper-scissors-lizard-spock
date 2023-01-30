@@ -7,3 +7,20 @@ body {
 h1 {
     font-family: "Bubblegum Sans", sans-serif;
 }
+
+#game-area {
+    margin: 5%;
+}
+
+.gamer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selection {
+    width: 18%;
+}
+
+img {
+    width: 90%;
+}
