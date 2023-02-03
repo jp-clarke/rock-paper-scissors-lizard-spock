@@ -13,37 +13,37 @@
     <section id="game-area">
         <h2>PICK ONE!</h2>
             <div id="player" class="gamer">
-                <button class="selection">
+                <button data-type="player-rock" class="selection">
                     <img src="/assets/images/rock.png" alt="rock hand gesture">
                 </button>
-                <button class="selection">
+                <button data-type="player-paper" class="selection">
                     <img src="/assets/images/paper.png" alt="paper hand gesture">
                 </button>
-                <button class="selection">
+                <button data-type="player-scissors" class="selection">
                     <img src="/assets/images/scissors.png" alt="scissors hand gesture">
                 </button>
-                <button class="selection">
+                <button data-type="player-lizard" class="selection">
                     <img src="/assets/images/lizard.png" alt="lizard hand gesture">
                 </button>
-                <button class="selection">
+                <button data-type="player-spock" class="selection">
                     <img src="/assets/images/spock.png" alt="spock hand gesture">
                 </button>
             </div>
         <h2>COMPUTER PICKS</h2>
             <div id="computer" class="gamer">            
-                <div class="selection">
+                <div id="com-rock" class="selection">
                     <img src="/assets/images/rock.png" alt="rock hand gesture">
                 </div>
-                <div class="selection">
+                <div id="com-paper" class="selection">
                     <img src="/assets/images/paper.png" alt="paper hand gesture">
                 </div>
-                <div class="selection">
+                <div id="com-scissors" class="selection">
                     <img src="/assets/images/scissors.png" alt="scissors hand gesture">
                 </div>
-                <div class="selection">
+                <div id="com-lizard" class="selection">
                     <img src="/assets/images/lizard.png" alt="lizard hand gesture">
                 </div>
-                <div class="selection">
+                <div id="com-spock" class="selection">
                     <img src="/assets/images/spock.png" alt="spock hand gesture">
                 </div>
         </div>
@@ -53,7 +53,7 @@
         <p id="scoreboard">
             YOU  <span id="player-score">0</span> - <span id="computer-score">0</span>  COM
         </p>
-        <button id="reset">RESET SCORE</button>
+        <button data-type="reset-score" id="reset">RESET SCORE</button>
     </section>
     
     <script src="assets/js/script.js"></script>
