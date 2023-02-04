@@ -45,20 +45,16 @@ function playGame(playerPicks) {
 // Player picks rock
 function playRock(computerPicks) {
     if (computerPicks === 0) {
-        console.log(playerPicks);
-        alert("DRAW\nYou chose Rock\nCOM chose Rock");
+        draw();
     } else if (computerPicks === 1) {
         console.log(playerPicks);
-        alert("LOSE\nYou chose Rock\nCOM chose Paper");
+        youLose();
     } else if (computerPicks === 2) {
-        console.log(playerPicks);
-        alert("WIN\nYou chose Rock\nCOM chose Scissors");
+        youWin();
     } else if (computerPicks === 3) {
-        console.log(playerPicks);
-        alert("WIN\nYou chose Rock\nCOM chose Lizard");
+        youWin();
     } else {
-        console.log(playerPicks);
-        alert("LOSE\nYou chose Rock\nCOM chose Spock");
+        youLose();
     }
 }
 
@@ -75,9 +71,18 @@ function playRock(computerPicks) {
 
 
 // Draw function
-
+function draw() {
+    alert(`DRAW\nYou both chose ${select[playerPicks]}`);    
+}
 
 // Win function
-
+function youWin() {
+    alert(`You Win!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
+    ++document.getElementById("player-score").innerText;
+}
 
 // Lose function
+function youLose() {
+    alert(`Computer Wins!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
+    ++document.getElementById("computer-score").innerText;
+}
