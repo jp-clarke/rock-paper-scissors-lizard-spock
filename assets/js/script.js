@@ -9,8 +9,31 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "reset-score") {
                 console.log("Reset Scores");
             } else {
-                console.log("Play Game");
+                let playerPicks = this.getAttribute("data-type");
+                playGame(playerPicks);
             }
         });
     }
 });
+
+// Player choice and computer choice
+function playGame(playerPicks) {
+    let computerPicks = Math.floor(Math.random() * 5);
+    
+    if (playerPicks === "player-rock") {
+        console.log(playerPicks);
+        console.log(computerPicks);
+    } else if (playerPicks === "player-paper") {
+        console.log(playerPicks);
+        console.log(computerPicks);
+    } else if (playerPicks === "player-paper") {
+        console.log(playerPicks);
+        console.log(computerPicks);
+    } else if (playerPicks === "player-paper") {
+        console.log(playerPicks);
+        console.log(computerPicks);
+    } else {
+        console.log(playerPicks);
+        console.log(computerPicks);
+    }
+}
