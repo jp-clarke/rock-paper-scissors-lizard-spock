@@ -28,17 +28,13 @@ function playGame(playerPicks) {
     if (playerPicks === "0") {
         playRock(computerPicks);
     } else if (playerPicks === "1") {
-        console.log(playerPicks);
-        console.log(computerPicks);
+        playPaper(computerPicks);
     } else if (playerPicks === "2") {
-        console.log(playerPicks);
-        console.log(computerPicks);
+        playScissors(computerPicks);
     } else if (playerPicks === "3") {
-        console.log(playerPicks);
-        console.log(computerPicks);
+        playLizard(computerPicks);
     } else {
-        console.log(playerPicks);
-        console.log(computerPicks);
+        playSpock(computerPicks);
     }
 }
 
@@ -47,7 +43,6 @@ function playRock(computerPicks) {
     if (computerPicks === 0) {
         draw();
     } else if (computerPicks === 1) {
-        console.log(playerPicks);
         youLose();
     } else if (computerPicks === 2) {
         youWin();
@@ -59,16 +54,64 @@ function playRock(computerPicks) {
 }
 
 // Player picks paper
-
+function playPaper(computerPicks) {
+    if (computerPicks === 0) {
+        youWin();
+    } else if (computerPicks === 1) {
+        draw();
+    } else if (computerPicks === 2) {
+        youLose();
+    } else if (computerPicks === 3) {
+        youLose();
+    } else {
+        youWin();
+    }
+}
 
 // Player picks scissors
-
+function playScissors(computerPicks) {
+    if (computerPicks === 0) {
+        youLose();
+    } else if (computerPicks === 1) {
+        youWin();
+    } else if (computerPicks === 2) {
+        draw();
+    } else if (computerPicks === 3) {
+        youWin();
+    } else {
+        youLose();
+    }
+}
 
 // Player picks lizard
-
+function playLizard(computerPicks) {
+    if (computerPicks === 0) {
+        youLose();
+    } else if (computerPicks === 1) {
+        youWin();
+    } else if (computerPicks === 2) {
+        youLose();
+    } else if (computerPicks === 3) {
+        draw();
+    } else {
+        youWin();
+    }
+}
 
 // Player picks spock
-
+function playSpock(computerPicks) {
+    if (computerPicks === 0) {
+        youWin();
+    } else if (computerPicks === 1) {
+        youLose();
+    } else if (computerPicks === 2) {
+        youWin();
+    } else if (computerPicks === 3) {
+        youLose();
+    } else {
+        draw();
+    }
+}
 
 // Draw function
 function draw() {
