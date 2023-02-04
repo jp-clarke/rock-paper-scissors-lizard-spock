@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "reset-score") {
-                console.log("Reset Scores");
+                scoreReset();
             } else {
                 playerPicks = this.getAttribute("data-type");
                 playGame(playerPicks);
@@ -128,4 +128,10 @@ function youWin() {
 function youLose() {
     alert(`Computer Wins!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
     ++document.getElementById("computer-score").innerText;
+}
+
+// Reset scores
+function scoreReset() {
+    document.getElementById("player-score").innerText = "0";
+    document.getElementById("computer-score").innerText = "0";
 }
