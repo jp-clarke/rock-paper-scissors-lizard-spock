@@ -1,6 +1,8 @@
 // Declare global variables
 let playerPicks;
 let computerPicks;
+let playerScore = document.getElementById("player-score").innerText;
+let computerScore = document.getElementById("computer-score").innerText;
 const select = ["rock", "paper", "scissors", "lizard", "spock"]
 
 // Wait for DOM to load and add event listeners for buttons
@@ -120,21 +122,23 @@ function draw() {
 
 // Win function
 function youWin() {
+    ++playerScore;
+    document.getElementById("player-score").innerText = playerScore;
     winResult();
     // alert(`You Win!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
-    ++document.getElementById("player-score").innerText;
+    
 }
 
 // Lose function
 function youLose() {
     alert(`Computer Wins!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
-    ++document.getElementById("computer-score").innerText;
+    ++computerScore;
 }
 
 // Reset scores
 function scoreReset() {
-    document.getElementById("player-score").innerText = "0";
-    document.getElementById("computer-score").innerText = "0";
+    playerScore = "0";
+    computerScore = "0";
 }
 
 // Result
@@ -151,7 +155,7 @@ function winResult() {
                     <p>YOU WIN!</p>
                     <p>${select[playerPicks]} beats ${select[computerPicks]}</p>
                     <p id="scoreboard">
-                        YOU  <span id="player-score">0</span> - <span id="computer-score">0</span>  COM
+                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
                     </p>
                     <button data-type="play-again" id="replay">PLAY AGAIN</button>
                 </div>
@@ -171,7 +175,6 @@ function winResult() {
 
 // Replay Game
 function replayGame() {
-    console.log("Replay Game");
     let replay = document.getElementById("game-area");
 
     replay.innerHTML =
