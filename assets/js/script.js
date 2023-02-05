@@ -140,14 +140,19 @@ function youLose() {
 
 // Reset scores
 function scoreReset() {
-    playerScore = 0;
-    document.getElementById("player-score").innerText = playerScore;
+    
+    playerScore = 0;    
+    document.getElementById("player-score").innerText = "0";
+    
     computerScore = 0;
-    document.getElementById("computer-score").innerText = computerScore;
+    document.getElementById("computer-score").innerText = "0";
+    
 }
 
 // Result
 function drawResult() {
+    document.getElementById("reset").disabled = true;
+
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -173,12 +178,14 @@ function drawResult() {
             </div>`;
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-            document.getElementById("replay").addEventListener("click", function() {
-        replayGame()});
+        document.getElementById("replay").addEventListener("click", function() {
+            replayGame()});
 
 }
 
-function loseResult() {
+/* function loseResult() {
+    document.getElementById("reset").disabled = true;
+
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -206,9 +213,12 @@ function loseResult() {
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
             document.getElementById("replay").addEventListener("click", function() {
         replayGame()});
-}
+
+} */
 
 function winResult() {
+    document.getElementById("reset").disabled = true;
+
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -240,6 +250,8 @@ function winResult() {
 }
 
 function loseResult() {
+    document.getElementById("reset").disabled = true;
+
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -272,6 +284,8 @@ function loseResult() {
 
 // Replay Game
 function replayGame() {
+    document.getElementById("reset").disabled = false;
+
     let replay = document.getElementById("game-area");
 
     replay.innerHTML =
