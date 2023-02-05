@@ -169,6 +169,60 @@ function winResult() {
 
 }
 
+// Replay Game
 function replayGame() {
     console.log("Replay Game");
+    let replay = document.getElementById("game-area");
+
+    replay.innerHTML =
+        `<h2>PICK ONE!</h2>
+            <div id="player" class="gamer">
+                <button data-type="0" class="selection">
+                    <img src="/assets/images/rock.png" alt="rock hand gesture">
+                </button>
+                <button data-type="1" class="selection">
+                    <img src="/assets/images/paper.png" alt="paper hand gesture">
+                </button>
+                <button data-type="2" class="selection">
+                    <img src="/assets/images/scissors.png" alt="scissors hand gesture">
+                </button>
+                <button data-type="3" class="selection">
+                    <img src="/assets/images/lizard.png" alt="lizard hand gesture">
+                </button>
+                <button data-type="4" class="selection">
+                    <img src="/assets/images/spock.png" alt="spock hand gesture">
+                </button>
+            </div>
+        <h2>COMPUTER PICKS</h2>
+            <div id="computer" class="gamer">            
+                <div id="com-rock" class="selection">
+                    <img src="/assets/images/rock.png" alt="rock hand gesture">
+                </div>
+                <div id="com-paper" class="selection">
+                    <img src="/assets/images/paper.png" alt="paper hand gesture">
+                </div>
+                <div id="com-scissors" class="selection">
+                    <img src="/assets/images/scissors.png" alt="scissors hand gesture">
+                </div>
+                <div id="com-lizard" class="selection">
+                    <img src="/assets/images/lizard.png" alt="lizard hand gesture">
+                </div>
+                <div id="com-spock" class="selection">
+                    <img src="/assets/images/spock.png" alt="spock hand gesture">
+                </div>
+            </div>`;
+    
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "reset-score") {
+                scoreReset();
+            } else {
+                playerPicks = this.getAttribute("data-type");
+                playGame(playerPicks);
+            }
+        });
+    }        
+
 }
