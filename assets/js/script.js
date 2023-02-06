@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "reset-score") {
                 scoreReset();
+            } else if (this.getAttribute("data-type") === "get-rules") {
+                rules();
             } else {
                 playerPicks = this.getAttribute("data-type");
                 playGame(playerPicks);
@@ -143,6 +145,10 @@ function scoreReset() {
     computerScore = 0;
     document.getElementById("computer-score").innerText = "0";
     
+}
+
+function rules() {
+    console.log("Rules")
 }
 
 // Result
