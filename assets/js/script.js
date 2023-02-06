@@ -117,25 +117,21 @@ function playSpock(computerPicks) {
 
 // Draw function
 function draw() {
-    drawResult();
-    // alert(`DRAW\nYou both chose ${select[playerPicks]}`);    
+    drawResult();  
 }
 
 // Win function
 function youWin() {
     ++playerScore;
     document.getElementById("player-score").innerText = playerScore;
-    winResult();
-    // alert(`You Win!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`);
-    
+    winResult();    
 }
 
 // Lose function
 function youLose() {
     ++computerScore;
     document.getElementById("computer-score").innerText = computerScore;
-    loseResult();   
-    // alert(`Computer Wins!\nYou chose ${select[playerPicks]}\nComputer chose ${select[computerPicks]}`); 
+    loseResult();
 }
 
 // Reset scores
@@ -151,139 +147,119 @@ function scoreReset() {
 
 // Result
 function drawResult() {
+    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = true;
 
     let result = document.getElementById("game-area");
 
     result.innerHTML =
-        `<h2>YOU CHOSE</h2>
+        `<h2 class="choice">YOU CHOSE</h2>
             <div id="player" class="gamer">
-                <div class="selection">
+                <div class="choice">
                     <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
                 </div>
-                <div>
-                    <p>DRAW</p>
-                    <p>You both chose ${select[playerPicks]}</p>
-                    <p id="scoreboard">
+                <div class="outcome">
+                    <p class="game-result">DRAW</p>
+                    <p class="game-result">You both chose ${select[playerPicks]}</p>
+                    
+                </div>
+            </div>
+        <h2 class="choice">COMPUTER CHOSE</h2>
+            <div id="computer" class="gamer">
+                <div class="choice">
+                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                </div>
+                <div class="progress-score">
+                    <p class="score-result">
                         YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
                     </p>
                     <button data-type="play-again" id="replay">PLAY AGAIN</button>
-                </div>
-            </div>
-        <h2>COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="selection">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
                 </div>
             </div>`;
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
         document.getElementById("replay").addEventListener("click", function() {
-            replayGame()});
-
+            replayGame()
+        });
 }
 
-/* function loseResult() {
-    document.getElementById("reset").disabled = true;
-
-    let result = document.getElementById("game-area");
-
-    result.innerHTML =
-        `<h2>YOU CHOSE</h2>
-            <div id="player" class="gamer">
-                <div class="selection">
-                    <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                </div>
-                <div>
-                    <p>COMPUTER WINS!</p>
-                    <p>${select[computerPicks]} beats ${select[playerPicks]}</p>
-                    <p id="scoreboard">
-                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
-                    </p>
-                    <button data-type="play-again" id="replay">PLAY AGAIN</button>
-                </div>
-            </div>
-        <h2>COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="selection">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                </div>
-            </div>`;
-
-    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-            document.getElementById("replay").addEventListener("click", function() {
-        replayGame()});
-
-} */
-
 function winResult() {
+    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = true;
 
     let result = document.getElementById("game-area");
 
     result.innerHTML =
-        `<h2>YOU CHOSE</h2>
+        `<h2 class="choice">YOU CHOSE</h2>
             <div id="player" class="gamer">
-                <div class="selection">
+                <div class="choice">
                     <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
                 </div>
-                <div>
-                    <p>YOU WIN!</p>
-                    <p>${select[playerPicks]} beats ${select[computerPicks]}</p>
-                    <p id="scoreboard">
+                <div class="outcome">
+                    <p class="game-result">YOU WIN!</p>
+                    <p class="game-result">${select[playerPicks]} beats ${select[computerPicks]}</p>
+                    
+                </div>
+            </div>
+        <h2 class="choice">COMPUTER CHOSE</h2>
+            <div id="computer" class="gamer">
+                <div class="choice">
+                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                </div>
+                <div class="progress-score">
+                    <p class="score-result">
                         YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
                     </p>
                     <button data-type="play-again" id="replay">PLAY AGAIN</button>
                 </div>
-            </div>
-        <h2>COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="selection">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                </div>
             </div>`;
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-            document.getElementById("replay").addEventListener("click", function() {
-        replayGame()});
-
+        document.getElementById("replay").addEventListener("click", function() {
+            replayGame()
+        });
 }
 
 function loseResult() {
+    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = true;
 
     let result = document.getElementById("game-area");
 
     result.innerHTML =
-        `<h2>YOU CHOSE</h2>
+        `<h2 class="choice">YOU CHOSE</h2>
             <div id="player" class="gamer">
-                <div class="selection">
+                <div class="choice">
                     <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
                 </div>
-                <div>
-                    <p>COMPUTER WINS!</p>
-                    <p>${select[computerPicks]} beats ${select[playerPicks]}</p>
-                    <p id="scoreboard">
-                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
-                    </p>
-                    <button data-type="play-again" id="replay">PLAY AGAIN</button>
+                <div class="outcome">
+                    <p class="game-result">COMPUTER WINS!</p>
+                    <p class="game-result">${select[computerPicks]} beats ${select[playerPicks]}</p>
+                    
                 </div>
             </div>
-        <h2>COMPUTER CHOSE</h2>
+        <h2 class="choice">COMPUTER CHOSE</h2>
             <div id="computer" class="gamer">
-                <div class="selection">
+                <div class="choice">
                     <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                </div>
+                <div class="progress-score">
+                    <p class="score-result">
+                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+                    </p>
+                    <button data-type="play-again" id="replay">PLAY AGAIN</button>                
                 </div>
             </div>`;
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-            document.getElementById("replay").addEventListener("click", function() {
-        replayGame()});
-
+        document.getElementById("replay").addEventListener("click", function() {
+            replayGame()
+        });
 }
 
 // Replay Game
 function replayGame() {
+    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = false;
 
     let replay = document.getElementById("game-area");
