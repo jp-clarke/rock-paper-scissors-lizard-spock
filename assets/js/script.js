@@ -156,6 +156,27 @@ function drawResult() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = true;
 
+    let result = document.getElementById("computer");
+
+    result.innerHTML =
+        `<div id="result">
+            <div class="game">
+                <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
+                <figcaption>You chose ${select[playerPicks]}</figcaption>
+            </div>
+            <div class="game">
+                <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+            </div>
+        </div>
+        <div class="progress-score">
+            <p class="score-point">DRAW - you both chose ${select[playerPicks]}!</p>
+            <p class="score-result">
+                YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+            </p>
+        </div>`;
+
+    /*
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -186,7 +207,7 @@ function drawResult() {
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
         document.getElementById("replay").addEventListener("click", function() {
             replayGame()
-        });
+        });*/
 }
 
 function winResult() {
@@ -213,11 +234,6 @@ function winResult() {
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
         </div>`;
-
-    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        });
 
     /*
     let result = document.getElementById("game-area");
@@ -257,6 +273,27 @@ function loseResult() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
     document.getElementById("reset").disabled = true;
 
+    let result = document.getElementById("computer");
+
+    result.innerHTML =
+        `<div id="result">
+            <div class="game">
+                <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
+                <figcaption>You chose ${select[playerPicks]}</figcaption>
+            </div>
+            <div class="game">
+                <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+            </div>
+        </div>
+        <div class="progress-score">
+            <p class="score-point">${select[computerPicks]} beats ${select[playerPicks]} - computer scores a point!</p>
+            <p class="score-result">
+                YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+            </p>
+        </div>`;
+
+    /*
     let result = document.getElementById("game-area");
 
     result.innerHTML =
@@ -287,7 +324,7 @@ function loseResult() {
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
         document.getElementById("replay").addEventListener("click", function() {
             replayGame()
-        });
+        }); */
 }
 
 // Replay Game
