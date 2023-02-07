@@ -24,9 +24,15 @@ h1 {
 }
 
 h2, #scoring-area {
+    margin: 5px 0;
     text-align: center;
-    padding-top: 5px;
     font-size: 1.25rem;
+}
+
+h3 {
+    margin: 5px 0 10px;
+    text-align: center;
+    font-size: 1rem;
 }
 
 p, #reset {
@@ -103,15 +109,26 @@ figcaption {
     margin-top: 10px;
 }
 
-.game-result, #replay {
+.game-result {
     font-size: 1.25rem;
     text-transform: uppercase;
     margin-bottom: 0;
 }
 
+#replay {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
 .scoreboard {
     font-size: 1.25rem;
     margin-top: 5px;
+}
+
+.final-score {
+    font-size: 1.5rem;
+    margin: 25px 0;
 }
 
 button {
@@ -127,4 +144,5 @@ img {
 
 button:hover {
     cursor: pointer;
+    font-weight: bold;
 }

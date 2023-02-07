@@ -3,6 +3,7 @@ let playerPicks;
 let computerPicks;
 let playerScore = 0;//document.getElementById("player-score").innerText;
 let computerScore = 0;//document.getElementById("computer-score").innerText;
+let scoreLimit = parseInt(document.getElementById("score-limit").innerText);
 const select = ["rock", "paper", "scissors", "lizard", "spock"]
 
 // Wait for DOM to load and add event listeners for buttons
@@ -244,6 +245,10 @@ function winResult() {
             </p>
         </div>`;
 
+    if (playerScore === scoreLimit) {
+        finalScorePlayer();
+    }
+
     /*
     let result = document.getElementById("game-area");
 
@@ -302,6 +307,10 @@ function loseResult() {
             </p>
         </div>`;
 
+        if (computerScore === scoreLimit) {
+            finalScoreComputer();
+        }
+
     /*
     let result = document.getElementById("game-area");
 
@@ -336,10 +345,47 @@ function loseResult() {
         }); */
 }
 
+// Final Scores
+function finalScorePlayer() {
+    let finalScore = document.getElementById("computer");
+
+    finalScore.innerHTML =
+        `<div class="progress-score">   
+            <h2>CONGRATULATIONS!<br>YOU WIN THE GAME!<br>FINAL SCORES:</h2>
+            <p class="final-score">
+                    YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+            </p>
+            <button data-type="play-again" id="replay">PLAY AGAIN</button>
+        </div>`;
+
+        // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
+        document.getElementById("replay").addEventListener("click", function() {
+            replayGame()
+        });
+}
+
+function finalScoreComputer() {
+    let finalScore = document.getElementById("computer");
+
+    finalScore.innerHTML =
+        `<div class="progress-score">   
+            <h2>COMMISERATIONS!<br>COMPUTER WINS THE GAME!<br>FINAL SCORES:</h2>
+            <p class="final-score">
+                    YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+            </p>
+            <button data-type="play-again" id="replay">PLAY AGAIN</button>
+        </div>`;
+
+        // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
+        document.getElementById("replay").addEventListener("click", function() {
+            replayGame()
+        });
+}
+
 // Replay Game
 function replayGame() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    document.getElementById("reset").disabled = false;
+    // document.getElementById("reset").disabled = false;
 
     let replay = document.getElementById("game-area");
 
