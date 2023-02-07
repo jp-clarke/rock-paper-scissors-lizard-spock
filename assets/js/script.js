@@ -3,7 +3,7 @@ let playerPicks;
 let computerPicks;
 let playerScore = 0;//document.getElementById("player-score").innerText;
 let computerScore = 0;//document.getElementById("computer-score").innerText;
-let scoreLimit = parseInt(document.getElementById("score-limit").innerText);
+const scoreLimit = parseInt(document.getElementById("score-limit").innerText);
 const select = ["rock", "paper", "scissors", "lizard", "spock"]
 
 // Wait for DOM to load and add event listeners for buttons
@@ -347,6 +347,8 @@ function loseResult() {
 
 // Final Scores
 function finalScorePlayer() {
+
+    
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
@@ -358,6 +360,13 @@ function finalScorePlayer() {
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
         </div>`;
 
+        
+        let choice = document.getElementsByClassName("selection");
+
+        for (let i = 0; i < choice.length; i++) {            
+            choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+        }
+        
         // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
         document.getElementById("replay").addEventListener("click", function() {
             replayGame()
@@ -365,6 +374,8 @@ function finalScorePlayer() {
 }
 
 function finalScoreComputer() {
+
+
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
@@ -376,6 +387,12 @@ function finalScoreComputer() {
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
         </div>`;
 
+        let choice = document.getElementsByClassName("selection");
+        
+        for (let i = 0; i < choice.length; i++) {            
+            choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+        }
+
         // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
         document.getElementById("replay").addEventListener("click", function() {
             replayGame()
@@ -384,46 +401,48 @@ function finalScoreComputer() {
 
 // Replay Game
 function replayGame() {
-    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    // document.getElementById("reset").disabled = false;
+    playerScore = 0;
+    computerScore = 0;
 
     let replay = document.getElementById("game-area");
 
     replay.innerHTML =
-        `<h2>PICK ONE!</h2>
+        `<h2>PICK ONE</h2>
+        <h3>FIRST TO <span id="score-limit">7</span> WINS</h3>
+            
             <div id="player" class="gamer">
                 <button data-type="0" class="selection">
                     <img src="/assets/images/rock.png" alt="rock hand gesture">
+                    <figcaption class="caption">Rock</figcaption>
                 </button>
                 <button data-type="1" class="selection">
                     <img src="/assets/images/paper.png" alt="paper hand gesture">
+                    <figcaption class="caption">Paper</figcaption>
                 </button>
                 <button data-type="2" class="selection">
                     <img src="/assets/images/scissors.png" alt="scissors hand gesture">
+                    <figcaption class="caption">Scissors</figcaption>
                 </button>
                 <button data-type="3" class="selection">
                     <img src="/assets/images/lizard.png" alt="lizard hand gesture">
+                    <figcaption class="caption">Lizard</figcaption>
                 </button>
                 <button data-type="4" class="selection">
                     <img src="/assets/images/spock.png" alt="spock hand gesture">
+                    <figcaption class="caption">Spock</figcaption>
                 </button>
             </div>
-        <h2>COMPUTER PICKS</h2>
-            <div id="computer" class="gamer">            
-                <div id="com-rock" class="selection">
-                    <img src="/assets/images/rock.png" alt="rock hand gesture">
+
+            <div id="computer">
+                <div id="result">
+                    <div class="scenarios">
+                        <img src="/assets/images/rpsls.png" alt="all hand gestures">
+                    </div>
                 </div>
-                <div id="com-paper" class="selection">
-                    <img src="/assets/images/paper.png" alt="paper hand gesture">
-                </div>
-                <div id="com-scissors" class="selection">
-                    <img src="/assets/images/scissors.png" alt="scissors hand gesture">
-                </div>
-                <div id="com-lizard" class="selection">
-                    <img src="/assets/images/lizard.png" alt="lizard hand gesture">
-                </div>
-                <div id="com-spock" class="selection">
-                    <img src="/assets/images/spock.png" alt="spock hand gesture">
+                <div class="start-score">
+                    <p class="scoreboard">
+                        YOU  <span id="player-score">0</span> - <span id="computer-score">0</span>  COM
+                    </p>
                 </div>
             </div>`;
     
