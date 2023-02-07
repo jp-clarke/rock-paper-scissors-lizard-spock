@@ -26,7 +26,7 @@ h1 {
 h2, #scoring-area {
     text-align: center;
     padding-top: 5px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 p, #reset {
@@ -34,6 +34,7 @@ p, #reset {
 }
 
 #game-area {
+    height: 500px;
     margin: 0 15%;
     padding: 5px 15px 20px;
     background-color: lightgrey;
@@ -42,15 +43,17 @@ p, #reset {
 
 .gamer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .selection {
-    width: 120px;
-    height: 120px;
-    text-align: center;
+    width: 80px;
+    height: 80px;
+    /* text-align: center; */
     background: none;
     border: none;
+    padding: 0 0;
+    margin: 0 10px;
 }
 
 .choice {
