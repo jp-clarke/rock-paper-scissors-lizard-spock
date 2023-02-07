@@ -1,8 +1,8 @@
 // Declare global variables
 let playerPicks;
 let computerPicks;
-let playerScore = document.getElementById("player-score").innerText;
-let computerScore = document.getElementById("computer-score").innerText;
+let playerScore = 0;//document.getElementById("player-score").innerText;
+let computerScore = 0;//document.getElementById("computer-score").innerText;
 const select = ["rock", "paper", "scissors", "lizard", "spock"]
 
 // Wait for DOM to load and add event listeners for buttons
@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "get-rules") {
+                rules();
+            } else {
+                playerPicks = this.getAttribute("data-type");
+                playGame(playerPicks);
+            }
+        });
+
+        /*button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "reset-score") {
                 scoreReset();
             } else if (this.getAttribute("data-type") === "get-rules") {
@@ -21,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 playerPicks = this.getAttribute("data-type");
                 playGame(playerPicks);
             }
-        });
+        });*/
     }
 });
 
@@ -154,7 +163,7 @@ function rules() {
 // Result
 function drawResult() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    document.getElementById("reset").disabled = true;
+    // document.getElementById("reset").disabled = true;
 
     let result = document.getElementById("computer");
 
@@ -171,7 +180,7 @@ function drawResult() {
         </div>
         <div class="progress-score">
             <p class="score-point">DRAW - you both chose ${select[playerPicks]}!</p>
-            <p class="score-result">
+            <p class="scoreboard">
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
         </div>`;
@@ -212,7 +221,7 @@ function drawResult() {
 
 function winResult() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    document.getElementById("reset").disabled = true;
+    // document.getElementById("reset").disabled = true;
 
     
     let result = document.getElementById("computer");
@@ -230,7 +239,7 @@ function winResult() {
         </div>
         <div class="progress-score">
             <p class="score-point">${select[playerPicks]} beats ${select[computerPicks]} - you score a point!</p>
-            <p class="score-result">
+            <p class="scoreboard">
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
         </div>`;
@@ -271,7 +280,7 @@ function winResult() {
 
 function loseResult() {
     // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    document.getElementById("reset").disabled = true;
+    // document.getElementById("reset").disabled = true;
 
     let result = document.getElementById("computer");
 
@@ -288,7 +297,7 @@ function loseResult() {
         </div>
         <div class="progress-score">
             <p class="score-point">${select[computerPicks]} beats ${select[playerPicks]} - computer scores a point!</p>
-            <p class="score-result">
+            <p class="scoreboard">
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
         </div>`;
