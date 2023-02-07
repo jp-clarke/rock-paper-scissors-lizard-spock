@@ -4,11 +4,23 @@ body {
     font-family: "Varela Round", sans-serif;
 }
 
+header {
+    height: 75px;
+    text-align: center;
+}
+
 h1 {
     font-family: "Bubblegum Sans", sans-serif;
-    text-align: center;
     font-size: 3rem;
-    
+    display: inline-block;
+    margin: 5px auto;
+}
+
+#rules {
+    font-size: 1.5rem;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 10px;
 }
 
 h2, #scoring-area {
@@ -19,12 +31,6 @@ h2, #scoring-area {
 
 p, #reset {
     font-size: 2rem;
-}
-
-#rules {
-    font-size: 1.5rem;
-    display: inline-block;
-    float: right;
 }
 
 #game-area {
