@@ -1,8 +1,8 @@
 // Declare global variables
 let playerPicks;
 let computerPicks;
-let playerScore = 0;//document.getElementById("player-score").innerText;
-let computerScore = 0;//document.getElementById("computer-score").innerText;
+let playerScore = document.getElementById("player-score").innerText;
+let computerScore = document.getElementById("computer-score").innerText;
 const scoreLimit = parseInt(document.getElementById("score-limit").innerText);
 const select = ["rock", "paper", "scissors", "lizard", "spock"]
 
@@ -10,6 +10,7 @@ const select = ["rock", "paper", "scissors", "lizard", "spock"]
 // Code from Love Maths waklthrough project by Code Institute
 
 document.addEventListener("DOMContentLoaded", function() {
+    
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
@@ -136,14 +137,12 @@ function youLose() {
 }
 
 // Reset scores
-function scoreReset() {
-    
+function scoreReset() {    
     playerScore = 0;    
     document.getElementById("player-score").innerText = "0";
     
     computerScore = 0;
-    document.getElementById("computer-score").innerText = "0";
-    
+    document.getElementById("computer-score").innerText = "0";    
 }
 
 function rules() {
@@ -160,9 +159,6 @@ function rules() {
 
 // Result
 function drawResult() {
-    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    // document.getElementById("reset").disabled = true;
-
     let result = document.getElementById("computer");
 
     result.innerHTML =
@@ -184,8 +180,7 @@ function drawResult() {
         </div>`;
 }
 
-function winResult() {
-    
+function winResult() {    
     let result = document.getElementById("computer");
 
     result.innerHTML =
@@ -212,9 +207,6 @@ function winResult() {
 }
 
 function loseResult() {
-    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    // document.getElementById("reset").disabled = true;
-
     let result = document.getElementById("computer");
 
     result.innerHTML =
@@ -241,8 +233,7 @@ function loseResult() {
 }
 
 // Final Scores
-function finalScorePlayer() {
-    
+function finalScorePlayer() {    
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
@@ -264,20 +255,19 @@ function finalScorePlayer() {
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
         </div>`;    
     
-        let choice = document.getElementsByClassName("selection");
+    let choice = document.getElementsByClassName("selection");
 
-        for (let i = 0; i < choice.length; i++) {            
-            choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
-        }
-        
-        // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        });
+    for (let i = 0; i < choice.length; i++) {            
+        choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+    }
+    
+    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
+    document.getElementById("replay").addEventListener("click", function() {
+        replayGame()
+    });
 }
 
 function finalScoreComputer() {
-
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
@@ -299,16 +289,16 @@ function finalScoreComputer() {
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
         </div>`;
 
-        let choice = document.getElementsByClassName("selection");
-        
-        for (let i = 0; i < choice.length; i++) {            
-            choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
-        }
+    let choice = document.getElementsByClassName("selection");
+    
+    for (let i = 0; i < choice.length; i++) {            
+        choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+    }
 
-        // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        });
+    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
+    document.getElementById("replay").addEventListener("click", function() {
+        replayGame()
+    });
 }
 
 // Replay Game

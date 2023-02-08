@@ -9,51 +9,49 @@
 </head>
 <body>
     <header>
-        <h1>Rock Paper Scissors Lizard Spock</h1>
-        
+        <h1>Rock Paper Scissors Lizard Spock</h1>        
     </header>
 
-    <section id="game-area">
+    <section id="game-area">        
         <h2>PICK ONE</h2>
         <button data-type="get-rules" id="rules">RULES</button>
-        <h3>FIRST TO <span id="score-limit">3</span> WINS</h3>
+        <h3>FIRST TO <span id="score-limit">3</span> WINS</h3>            
             
-            <div id="player" class="gamer">
-                <button data-type="0" class="selection">
-                    <img src="/assets/images/rock.png" alt="rock hand gesture">
-                    <figcaption class="caption">Rock</figcaption>
-                </button>
-                <button data-type="1" class="selection">
-                    <img src="/assets/images/paper.png" alt="paper hand gesture">
-                    <figcaption class="caption">Paper</figcaption>
-                </button>
-                <button data-type="2" class="selection">
-                    <img src="/assets/images/scissors.png" alt="scissors hand gesture">
-                    <figcaption class="caption">Scissors</figcaption>
-                </button>
-                <button data-type="3" class="selection">
-                    <img src="/assets/images/lizard.png" alt="lizard hand gesture">
-                    <figcaption class="caption">Lizard</figcaption>
-                </button>
-                <button data-type="4" class="selection">
-                    <img src="/assets/images/spock.png" alt="spock hand gesture">
-                    <figcaption class="caption">Spock</figcaption>
-                </button>
-            </div>
+        <div id="player" class="gamer">
+            <button data-type="0" class="selection">
+                <img src="/assets/images/rock.png" alt="rock hand gesture">
+                <figcaption class="caption">Rock</figcaption>
+            </button>
+            <button data-type="1" class="selection">
+                <img src="/assets/images/paper.png" alt="paper hand gesture">
+                <figcaption class="caption">Paper</figcaption>
+            </button>
+            <button data-type="2" class="selection">
+                <img src="/assets/images/scissors.png" alt="scissors hand gesture">
+                <figcaption class="caption">Scissors</figcaption>
+            </button>
+            <button data-type="3" class="selection">
+                <img src="/assets/images/lizard.png" alt="lizard hand gesture">
+                <figcaption class="caption">Lizard</figcaption>
+            </button>
+            <button data-type="4" class="selection">
+                <img src="/assets/images/spock.png" alt="spock hand gesture">
+                <figcaption class="caption">Spock</figcaption>
+            </button>
+        </div>
 
-            <div id="computer">
-                <div id="result">
-                    <div class="scenarios">
-                        <img src="/assets/images/rpsls.png" alt="all hand gestures">
-                    </div>
-                </div>
-                <div class="start-score">
-                    <p class="scoreboard">
-                        YOU  <span id="player-score">0</span> - <span id="computer-score">0</span>  COM
-                    </p>
+        <div id="computer">
+            <div id="result">
+                <div class="scenarios">
+                    <img src="/assets/images/rpsls.png" alt="all hand gestures">
                 </div>
             </div>
-
+            <div class="start-score">
+                <p class="scoreboard">
+                    YOU  <span id="player-score">0</span> - <span id="computer-score">0</span>  COM
+                </p>
+            </div>
+        </div>
     </section>
     
     <script src="assets/js/script.js"></script>
