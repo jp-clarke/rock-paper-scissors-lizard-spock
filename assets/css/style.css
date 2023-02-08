@@ -43,7 +43,6 @@ p {
 }
 
 #game-area {
-    height: 500px;
     margin: 0 15%;
     padding: 5px 15px 20px;
     background-color: lightgrey;
@@ -103,7 +102,7 @@ figcaption {
 }
 
 .progress-score {
-    margin-top: 50px;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -147,4 +146,21 @@ img {
 button:hover {
     cursor: pointer;
     font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+
+    header {
+        height: 50px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    #game-area {
+        margin: 0 5%;
+        padding: 5px 15px 20px;
+    }
+
 }
