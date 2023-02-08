@@ -46,7 +46,7 @@ p {
 
 #game-area {
     margin: 0 15%;
-    padding: 5px 15px 20px;
+    padding: 5px 15px;
     background-color: lightgrey;
     border-radius: 20px;
     text-align: center;
@@ -87,11 +87,13 @@ p {
 }
 
 .start-score {
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .progress-score {
     margin-top: 75px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -143,7 +145,6 @@ button:hover {
 
     #game-area {
         margin: 0 5%;
-        padding: 5px 15px 20px;
     }
 
     #rules {
@@ -217,9 +218,7 @@ button:hover {
     }
 
     .selection {
-        width: 50px;
-        height: 50px;
-        margin: 0 10px 25px 10px;
+        margin: 0 16px 25px 16px;
     }
 
     .caption {
@@ -227,18 +226,22 @@ button:hover {
     }
 
     #computer {
-        margin-top: 0px;
+        margin-top: 10px;
     }
 
     .scenarios {
-        height: 150px;
-        width: 150px;
+        height: 175px;
+        width: 175px;
     }
 
     .game {    
         height: 100px;
         width: 100px;
         padding: 0 10px;
+    }
+
+    .progress-score {
+        margin-top: 50px;
     }
 
     .scoreboard {
@@ -259,7 +262,7 @@ button:hover {
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
 
     h1 {
         font-size: 1.25rem;
