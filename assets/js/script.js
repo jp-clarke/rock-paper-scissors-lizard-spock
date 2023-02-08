@@ -169,11 +169,11 @@ function drawResult() {
         `<div id="result">
             <div class="game">
                 <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                <figcaption>You chose ${select[playerPicks]}</figcaption>
+                <figcaption class="caption">You chose ${select[playerPicks]}</figcaption>
             </div>
             <div class="game">
                 <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+                <figcaption class="caption">Computer chose ${select[computerPicks]}</figcaption>
             </div>
         </div>
         <div class="progress-score">
@@ -192,11 +192,11 @@ function winResult() {
         `<div id="result">
             <div class="game">
                 <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                <figcaption>You chose ${select[playerPicks]}</figcaption>
+                <figcaption class="caption">You chose ${select[playerPicks]}</figcaption>
             </div>
             <div class="game">
                 <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+                <figcaption class="caption">Computer chose ${select[computerPicks]}</figcaption>
             </div>
         </div>
         <div class="progress-score">
@@ -221,11 +221,11 @@ function loseResult() {
         `<div id="result">
             <div class="game">
                 <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                <figcaption>You chose ${select[playerPicks]}</figcaption>
+                <figcaption class="caption">You chose ${select[playerPicks]}</figcaption>
             </div>
             <div class="game">
                 <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+                <figcaption class="caption">Computer chose ${select[computerPicks]}</figcaption>
             </div>
         </div>
         <div class="progress-score">
@@ -249,11 +249,11 @@ function finalScorePlayer() {
         `<div id="result">
             <div class="game">
                 <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                <figcaption>You chose ${select[playerPicks]}</figcaption>
+                <figcaption class="caption">You chose ${select[playerPicks]}</figcaption>
             </div>
             <div class="game">
                 <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+                <figcaption class="caption">Computer chose ${select[computerPicks]}</figcaption>
             </div>
         </div>
         <div class="progress-score">
@@ -284,11 +284,11 @@ function finalScoreComputer() {
         `<div id="result">
             <div class="game">
                 <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                <figcaption>You chose ${select[playerPicks]}</figcaption>
+                <figcaption class="caption">You chose ${select[playerPicks]}</figcaption>
             </div>
             <div class="game">
                 <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+                <figcaption class="caption">Computer chose ${select[computerPicks]}</figcaption>
             </div>
         </div>
         <div class="progress-score">

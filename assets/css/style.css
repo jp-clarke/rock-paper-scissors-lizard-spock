@@ -6,7 +6,6 @@ body {
 }
 
 header {
-    /*height: 75px;*/
     display: inline-block;
     margin: 0 auto;
     text-align: center;
@@ -67,7 +66,7 @@ p {
     margin: 0 10px;
 }
 
-figcaption {
+.caption {
     text-align: center;
 }
 
@@ -87,19 +86,6 @@ figcaption {
     padding: 0 50px;
 }
 
-/*.choice {
-    width: 18%;
-    margin-left: 25%;
-    background: none;
-    border: none;
-}*/
-
-/*.outcome {
-    margin-right: auto;
-    margin-top: auto;
-    padding-left: 10%;
-}*/
-
 .start-score {
     text-align: center;
 }
@@ -113,12 +99,6 @@ figcaption {
     text-transform: uppercase;
     margin-top: 25px;
 }
-
-/*.game-result {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-bottom: 0;
-}*/
 
 #replay {
     text-transform: uppercase;
@@ -210,13 +190,9 @@ button:hover {
 
 @media screen and (max-width: 450px) {
 
-    /*header {
-        height: 75px;
-    }*/
-    
     h1 {
-        font-size: 1.25rem;
-        width: 280px;
+        font-size: 1.5rem;
+        /*width: 280px;*/
     }
 
     h2 {
@@ -225,7 +201,7 @@ button:hover {
     }
     
     h3 {
-        margin: 5px 0 10px;
+        margin: 5px 0 5px;
         font-size: 0.65rem;
     }
 
@@ -246,13 +222,17 @@ button:hover {
         margin: 0 10px 25px 10px;
     }
 
+    .caption {
+        font-size: 0.75rem;
+    }
+
     #computer {
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .scenarios {
-        height: 175px;
-        width: 175px;
+        height: 150px;
+        width: 150px;
     }
 
     .game {    
@@ -260,5 +240,104 @@ button:hover {
         width: 100px;
         padding: 0 10px;
     }
+
+    .scoreboard {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .score-point {
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+
+    button {
+        padding: 3px;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    h1 {
+        font-size: 1.25rem;
+        width: 280px;
+    }
+
+    h2 {
+        margin: 5px 0;
+        font-size: 0.8rem;
+    }
     
+    h3 {
+        margin: 5px 0 5px;
+        font-size: 0.65rem;
+    }
+
+    #rules {
+        font-size: 0.6rem;
+        position: absolute;
+        left: 70%;
+    }
+    
+    .gamer {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .selection {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px 25px 10px;
+    }
+
+    .caption {
+        font-size: 0.6rem;
+    }
+
+    #computer {
+        margin-top: 10px;
+    }
+
+    .scenarios {
+        height: 150px;
+        width: 150px;
+    }
+
+    .game {    
+        height: 75px;
+        width: 75px;
+        padding: 0 10px;
+    }
+
+    .progress-score {
+        margin-top: 40px;
+    }
+
+    .scoreboard {
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    .score-point {
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+
+    .final-score {
+        font-size: 0.75rem;
+    }
+
+    #replay {
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 3px;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
 }
