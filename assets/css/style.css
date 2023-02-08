@@ -163,4 +163,30 @@ button:hover {
         padding: 5px 15px 20px;
     }
 
+    #rules {
+        left: 80%;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .selection {
+        width: 60px;
+        height: 60px;
+        margin: 0 5px;
+    }
+    
+    .game {    
+        height: 125px;
+        width: 125px;
+        padding: 0 25px;
+    }
+
+    #rules {
+        font-size: 0.85rem;
+        position: absolute;
+        left: 75%;
+    }
+
 }
