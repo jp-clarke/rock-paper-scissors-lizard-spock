@@ -77,8 +77,8 @@ figcaption {
 }
 
 .game {    
-    height: 175px;
-    width: 175px;
+    height: 150px;
+    width: 150px;
     padding: 0 50px;
 }
 
@@ -106,7 +106,7 @@ figcaption {
 
 .score-point {
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .game-result {
@@ -116,9 +116,8 @@ figcaption {
 }
 
 #replay {
-    font-size: 1.5rem;
     text-transform: uppercase;
-    margin: 25px 0;
+    margin: 10px 0;
 }
 
 .scoreboard {
@@ -127,8 +126,8 @@ figcaption {
 }
 
 .final-score {
-    font-size: 1.5rem;
-    margin: 25px 0;
+    font-weight: bold;
+    margin-top: 10px 0;
 }
 
 button {

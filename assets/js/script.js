@@ -21,17 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 playGame(playerPicks);
             }
         });
-
-        /*button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "reset-score") {
-                scoreReset();
-            } else if (this.getAttribute("data-type") === "get-rules") {
-                rules();
-            } else {
-                playerPicks = this.getAttribute("data-type");
-                playGame(playerPicks);
-            }
-        });*/
     }
 });
 
@@ -185,45 +174,9 @@ function drawResult() {
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
         </div>`;
-
-    /*
-    let result = document.getElementById("game-area");
-
-    result.innerHTML =
-        `<h2 class="choice">YOU CHOSE</h2>
-            <div id="player" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                </div>
-                <div class="outcome">
-                    <p class="game-result">DRAW</p>
-                    <p class="game-result">You both chose ${select[playerPicks]}</p>
-                    
-                </div>
-            </div>
-        <h2 class="choice">COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                </div>
-                <div class="progress-score">
-                    <p class="score-result">
-                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
-                    </p>
-                    <button data-type="play-again" id="replay">PLAY AGAIN</button>
-                </div>
-            </div>`;
-
-    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        });*/
 }
 
 function winResult() {
-    // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
-    // document.getElementById("reset").disabled = true;
-
     
     let result = document.getElementById("computer");
 
@@ -248,39 +201,6 @@ function winResult() {
     if (playerScore === scoreLimit) {
         finalScorePlayer();
     }
-
-    /*
-    let result = document.getElementById("game-area");
-
-    result.innerHTML =
-        `<h2 class="choice">YOU CHOSE</h2>
-            <div id="player" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                </div>
-                <div class="outcome">
-                    <p class="game-result">YOU WIN!</p>
-                    <p class="game-result">${select[playerPicks]} beats ${select[computerPicks]}</p>
-                    
-                </div>
-            </div>
-        <h2 class="choice">COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                </div>
-                <div class="progress-score">
-                    <p class="score-result">
-                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
-                    </p>
-                    <button data-type="play-again" id="replay">PLAY AGAIN</button>
-                </div>
-            </div>`;
-
-    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        }); */
 }
 
 function loseResult() {
@@ -307,60 +227,35 @@ function loseResult() {
             </p>
         </div>`;
 
-        if (computerScore === scoreLimit) {
-            finalScoreComputer();
-        }
-
-    /*
-    let result = document.getElementById("game-area");
-
-    result.innerHTML =
-        `<h2 class="choice">YOU CHOSE</h2>
-            <div id="player" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
-                </div>
-                <div class="outcome">
-                    <p class="game-result">COMPUTER WINS!</p>
-                    <p class="game-result">${select[computerPicks]} beats ${select[playerPicks]}</p>
-                    
-                </div>
-            </div>
-        <h2 class="choice">COMPUTER CHOSE</h2>
-            <div id="computer" class="gamer">
-                <div class="choice">
-                    <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
-                </div>
-                <div class="progress-score">
-                    <p class="score-result">
-                        YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
-                    </p>
-                    <button data-type="play-again" id="replay">PLAY AGAIN</button>                
-                </div>
-            </div>`;
-
-    // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
-        document.getElementById("replay").addEventListener("click", function() {
-            replayGame()
-        }); */
+    if (computerScore === scoreLimit) {
+        finalScoreComputer();
+    }
 }
 
 // Final Scores
 function finalScorePlayer() {
-
     
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
-        `<div class="progress-score">   
-            <h2>CONGRATULATIONS!<br>YOU WIN THE GAME!<br>FINAL SCORES:</h2>
-            <p class="final-score">
-                    YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+        `<div id="result">
+            <div class="game">
+                <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
+                <figcaption>You chose ${select[playerPicks]}</figcaption>
+            </div>
+            <div class="game">
+                <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+            </div>
+        </div>
+        <div class="progress-score">
+            <p class="final-score">CONGRATULATIONS, YOU WIN!<br>FINAL SCORE:</p>
+            <p class="scoreboard">
+                YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
-        </div>`;
-
-        
+        </div>`;    
+    
         let choice = document.getElementsByClassName("selection");
 
         for (let i = 0; i < choice.length; i++) {            
@@ -375,14 +270,23 @@ function finalScorePlayer() {
 
 function finalScoreComputer() {
 
-
     let finalScore = document.getElementById("computer");
 
     finalScore.innerHTML =
-        `<div class="progress-score">   
-            <h2>COMMISERATIONS!<br>COMPUTER WINS THE GAME!<br>FINAL SCORES:</h2>
-            <p class="final-score">
-                    YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
+        `<div id="result">
+            <div class="game">
+                <img src="/assets/images/${select[playerPicks]}.png" alt="${select[playerPicks]} hand gesture">
+                <figcaption>You chose ${select[playerPicks]}</figcaption>
+            </div>
+            <div class="game">
+                <img src="/assets/images/${select[computerPicks]}.png" alt="${select[computerPicks]} hand gesture">
+                <figcaption>Computer chose ${select[computerPicks]}</figcaption>
+            </div>
+        </div>
+        <div class="progress-score">
+            <p class="final-score">COMMISERATIONS, COMPUTER WINS!<br>FINAL SCORE:</p>
+            <p class="scoreboard">
+                YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
             <button data-type="play-again" id="replay">PLAY AGAIN</button>
         </div>`;
@@ -457,6 +361,5 @@ function replayGame() {
                 playGame(playerPicks);
             }
         });
-    }        
-
+    }
 }
