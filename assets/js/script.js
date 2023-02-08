@@ -147,7 +147,15 @@ function scoreReset() {
 }
 
 function rules() {
-    console.log("Rules")
+    
+    console.log("Rules");
+    
+    // https://www.w3schools.com/jsref/met_win_open.asp
+    /*let rulesWindow = window.open("", "rulesWindow", "width=400,height=600");
+    rulesWindow.document.write(`
+    <h2>Rules</h2>
+    <p>Rock Paper Scissors Lizard Spock is a variation on the classic <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Rock Paper Scissors</a> game</p>
+    `);*/
 }
 
 // Result
@@ -249,7 +257,7 @@ function finalScorePlayer() {
             </div>
         </div>
         <div class="progress-score">
-            <p class="final-score">CONGRATULATIONS, YOU WIN!<br>FINAL SCORE:</p>
+            <p class="final-score">YOU WIN!<br>FINAL SCORE:</p>
             <p class="scoreboard">
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
@@ -284,7 +292,7 @@ function finalScoreComputer() {
             </div>
         </div>
         <div class="progress-score">
-            <p class="final-score">COMMISERATIONS, COMPUTER WINS!<br>FINAL SCORE:</p>
+            <p class="final-score">COMPUTER WINS!<br>FINAL SCORE:</p>
             <p class="scoreboard">
                 YOU  <span id="player-score">${playerScore}</span> - <span id="computer-score">${computerScore}</span>  COM
             </p>
@@ -312,7 +320,8 @@ function replayGame() {
 
     replay.innerHTML =
         `<h2>PICK ONE</h2>
-        <h3>FIRST TO <span id="score-limit">7</span> WINS</h3>
+        <button data-type="get-rules" id="rules">RULES</button>
+        <h3>FIRST TO <span id="score-limit">${scoreLimit}</span> WINS</h3>
             
             <div id="player" class="gamer">
                 <button data-type="0" class="selection">
@@ -354,8 +363,8 @@ function replayGame() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "reset-score") {
-                scoreReset();
+            if (this.getAttribute("data-type") === "get-rules") {
+                rules();
             } else {
                 playerPicks = this.getAttribute("data-type");
                 playGame(playerPicks);
