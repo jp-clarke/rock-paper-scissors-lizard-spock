@@ -12,7 +12,11 @@ Rock Paper Scissors Lizard Spock is a variation on the classic Rock Paper Scisso
 
 ### Typography
 
+The fonts selected for the heading and body are "Bubblegum Sans" and "Varela Round" respectively. Both come from Google Fonts.
 
+Bubblegum Sans is described in the Google Fonts About section as "upbeat, flavor-loaded, brushalicious letters for the sunny side of the street". This font was selected to give the user an immediate sense of fun and play.
+
+Similarly, Varela Round was selected to provide the user with a relaxed, soft feel, as well as being easy to read.
 
 ### Color Scheme
 
