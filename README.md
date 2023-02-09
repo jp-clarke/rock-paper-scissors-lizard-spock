@@ -1,6 +1,8 @@
 # Rock Paper Scissors Lizard Spock
 
+Rock Paper Scissors Lizard Spock is a variation on the classic Rock Paper Scissors game. This site is fully responsive and makes use of JavaScript to allow the user to play Rock Paper Scissors Lizard Spock against the computer in a best of five series (first to three wins). It is intended to demonstrate the capabilities of JavaScript in a fun and relaxed environment.
 
+![Am I Responsive screenshot](docs/screenshots/amiresponsive.PNG)
 
 ## Design
 
