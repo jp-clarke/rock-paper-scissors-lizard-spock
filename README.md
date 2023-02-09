@@ -82,7 +82,15 @@
 
 ## Deployment
 
+The site was deployed using Github Pages as follows:
+- In the GitHub repository, go to settings.
+- Navigate to the Pages section.
+- Select Deploy from a branch from the Source drop-down menu.
+- Select main from the Branch drop-down menu.
+- Select /(root) from the Folder drop-down menu, and save.
 
+The live link for the site is:<br>
+https://jp-clarke.github.io/rock-paper-scissors-lizard-spock/
 
 ## Credits
 
