@@ -80,15 +80,21 @@ This is a single page site with a simple game panel which allows the user to pla
 
 ## Testing
 
+- This site has been tested on the following browsers:
+    - Chrome
+    - Edge
+    - Firefox
+    - Opera
 
+- Testing consisted of the following:
+    - Loading the page.
+    - Visual inspection of all sections of the page to ensure that the layout is as expected.
+    - Play through the game several times to test various outcomes and ensure that everything works as expected.
 
-### Fixed Bugs
-
-
-
-### Unfixed Bugs
-
-
+- Responsive design testing consisted of the following:
+    - Responsive design was tested using Chrome DevTools across standard screen sizes from desktop (1920x1080) down to small mobile (320x480).
+    - Transitions between all media query breakpoints were observed.
+    - Testing was also conducted on several available hardware devices within the above range of screen sizes.
 
 ### Validator Testing
 
@@ -105,6 +111,14 @@ This is a single page site with a simple game panel which allows the user to pla
 
 
 #### Accessibility
+
+
+
+### Fixed Bugs
+
+
+
+### Unfixed Bugs
 
 
 
