@@ -100,15 +100,22 @@ This is a single page site with a simple game panel which allows the user to pla
 
 #### HTML
 
+- No errors were returned when checking code with the official W3C validator.
 
+![W3C HTML validator](docs/validator/html-validation.PNG)
 
 #### CSS
 
+- No errors were returned when checking code with the official W3C CSS validator.
 
+![W3C CSS validator](docs/validator/css-validation.PNG)
 
 #### JavaScript
 
+- No errors were returned when checking code with the official Jshint validator.
+- The following metrics and warnings were returned:
 
+![Jshint validator](docs/validator/jshint-validation.PNG)
 
 #### Accessibility
 
