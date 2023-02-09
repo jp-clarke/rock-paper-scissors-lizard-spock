@@ -8,7 +8,6 @@ const select = ["rock", "paper", "scissors", "lizard", "spock"];
 
 // Wait for DOM to load and add event listeners for buttons
 // Code from Love Maths waklthrough project by Code Institute
-
 document.addEventListener("DOMContentLoaded", function() {
     
     let buttons = document.getElementsByTagName("button");
@@ -240,8 +239,9 @@ function finalScorePlayer() {
     
     let choice = document.getElementsByClassName("selection");
 
-    for (let i = 0; i < choice.length; i++) {            
-        choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+    for (let i = 0; i < choice.length; i++) {        
+        // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+        choice[i].disabled = true;
     }
     
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
