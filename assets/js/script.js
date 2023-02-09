@@ -137,15 +137,7 @@ function youLose() {
 }
 
 function rules() {
-    
-    console.log("Rules");
-    
-    // https://www.w3schools.com/jsref/met_win_open.asp
-    let rulesWindow = window.open("", "rulesWindow", "width=400,height=600");
-    rulesWindow.document.write(`
-    <h2>Rules</h2>
-    <p>Rock Paper Scissors Lizard Spock is a variation on the classic <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Rock Paper Scissors</a> game</p>
-    `);
+    window.open("https://en.wikipedia.org/wiki/Rock_paper_scissors");    
 }
 
 // Result
