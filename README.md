@@ -18,9 +18,11 @@ Bubblegum Sans is described in the Google Fonts About section as "upbeat, flavor
 
 Similarly, Varela Round was selected to provide the user with a relaxed, soft feel, as well as being easy to read.
 
-### Color Scheme
+### Colour Scheme
 
+Each of the five options has a different colour - red for rock, yellow for paper, purple for scissors, green for lizard, and blue for Spock, all with a white hand gesture. To ensure a good contrast between all of these colours and black text, a neutral grey background was selected for the game panel.
 
+![Selection](docs/screenshots/selection.PNG)
 
 ## Features
 
