@@ -4,7 +4,7 @@ let computerPicks;
 let playerScore = document.getElementById("player-score").innerText;
 let computerScore = document.getElementById("computer-score").innerText;
 const scoreLimit = parseInt(document.getElementById("score-limit").innerText);
-const select = ["rock", "paper", "scissors", "lizard", "spock"]
+const select = ["rock", "paper", "scissors", "lizard", "spock"];
 
 // Wait for DOM to load and add event listeners for buttons
 // Code from Love Maths waklthrough project by Code Institute
@@ -136,15 +136,6 @@ function youLose() {
     loseResult();
 }
 
-// Reset scores
-function scoreReset() {    
-    playerScore = 0;    
-    document.getElementById("player-score").innerText = "0";
-    
-    computerScore = 0;
-    document.getElementById("computer-score").innerText = "0";    
-}
-
 function rules() {
     
     console.log("Rules");
@@ -263,7 +254,7 @@ function finalScorePlayer() {
     
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
     document.getElementById("replay").addEventListener("click", function() {
-        replayGame()
+        replayGame();
     });
 }
 
@@ -297,7 +288,7 @@ function finalScoreComputer() {
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
     document.getElementById("replay").addEventListener("click", function() {
-        replayGame()
+        replayGame();
     });
 }
 
