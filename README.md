@@ -74,7 +74,9 @@ This is a single page site with a simple game panel which allows the user to pla
 
 ### Features to be implemented
 
-
+- Allow the user to choose how many points will end the game.
+- Add functionality to keep tally of game wins instead of resetting at the end of each game.
+- A dedicated rules section which explains this game specifically, instead of linking to the rock paper scissors wikipedia page.
 
 ## Testing
 
