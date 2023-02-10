@@ -164,7 +164,10 @@ https://www.w3schools.com/jsref/jsref_parseint.asp
 
 ### Images
 
-
+All hand gesture graphics, as well as graphic showing win/loss outcomes, were taken from the Rock paper scissors wikipedia page (https://en.wikipedia.org/wiki/Rock_paper_scissors) and licensed under Creative Commons.
 
 ### Acknowledgements
+
+- I'd like to thank my mentor, Jubril Akolade for his guidance and support so far.
+- As always, a big thanks to the Code Institute Slack Community for sharing their knowledge and resources.
 
