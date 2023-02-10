@@ -119,7 +119,11 @@ This is a single page site with a simple game panel which allows the user to pla
 
 #### Accessibility
 
+- Page was tested for accessibility, performance, best preactices and SEO using Lighthouse in Chrome DevTools for both desktop and mobile.
 
+![Lighthouse Report for Desktop](docs/lighthouse/lighthouse-desktop.PNG)
+
+![Lighthouse Report for Mobile](docs/lighthouse/lighthouse-mobile.PNG)
 
 ### Fixed Bugs
 
