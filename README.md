@@ -8,7 +8,10 @@ Rock Paper Scissors Lizard Spock is a variation on the classic Rock Paper Scisso
 
 ### Wireframe
 
+The wireframes below were created to conceptualise the layout for the initial game panel as well as the final result. As the project progressed, the layout did change somewhat to suit, but the basic concept can still be seen in these initial wireframes.
 
+![Game start wireframe](docs/balsamiq/wireframe1.PNG)
+![Game result wireframe](docs/balsamiq/wireframe2.PNG)
 
 ### Typography
 
