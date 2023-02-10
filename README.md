@@ -127,11 +127,15 @@ This is a single page site with a simple game panel which allows the user to pla
 
 ### Fixed Bugs
 
-
+- User's points tally was not iterating at times. It was found that missing brackets were stopping the youWin() function from activating.
+- The event listener to allow the game to be replayed was activating without a button click. A post on Stack Overflow (link in Credits) suggested that replayGame() was being directly called when it should have been done in a callback. This solved the issue.
+- When game was replayed the event listeners stopped working. It was found that these had to be reloaded after using innerHTML to repopulate the game area.
+- After game ended and final scores were given it was possible to continue making selections and adding to the tally. This was solved by disabling the user selection buttons (link in credits) when the game ended.
+- The game wasn't ending when the scores had reached their supposed limit. It was found that the playerScore and computerScore variables were integers, whereas the scoreLimit constant was a string. This was solved using parseInt() to make sure that scoreLimit was also an integer (link in credits).
 
 ### Unfixed Bugs
 
-
+- In the event that both the player and computer make the same selection twice in a row, it is not obvious that anything has happened due to there being no change in appearance. In future, this should be rectified with an intermediate state which visually shows that there has been an iteration.
 
 ## Deployment
 
@@ -149,7 +153,14 @@ https://jp-clarke.github.io/rock-paper-scissors-lizard-spock/
 
 ### Content
 
+- Link which helped resolve event listener bug:<br>
+https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
 
+- Link referenced to disable user selection buttons:<br>
+https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+
+- Link reference for making scoreLimit an integer:
+https://www.w3schools.com/jsref/jsref_parseint.asp
 
 ### Images
 

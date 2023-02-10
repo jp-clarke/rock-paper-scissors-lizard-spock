@@ -3,6 +3,8 @@ let playerPicks;
 let computerPicks;
 let playerScore = document.getElementById("player-score").innerText;
 let computerScore = document.getElementById("computer-score").innerText;
+
+// https://www.w3schools.com/jsref/jsref_parseint.asp
 const scoreLimit = parseInt(document.getElementById("score-limit").innerText);
 const select = ["rock", "paper", "scissors", "lizard", "spock"];
 
@@ -274,8 +276,9 @@ function finalScoreComputer() {
 
     let choice = document.getElementsByClassName("selection");
     
-    for (let i = 0; i < choice.length; i++) {            
-        choice[i].disabled = true; // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp        
+    for (let i = 0; i < choice.length; i++) {
+        // https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+        choice[i].disabled = true;
     }
 
     // https://stackoverflow.com/questions/43042901/javascript-click-event-handler-fires-without-clicking
